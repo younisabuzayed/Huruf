@@ -5,11 +5,11 @@ import TrackPlayer from 'react-native-track-player';
 
 const CardsContainer = ({mainTitle, data, source}) => {
 
-    React.useEffect(() =>
-    {
+    // React.useEffect(() =>
+    // {
 
-        handlePress;
-    }, []);
+    //     handlePress;
+    // }, []);
     const handlePress = async (item) =>
     {
         await TrackPlayer.setupPlayer();

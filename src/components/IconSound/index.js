@@ -10,13 +10,7 @@ const IconSound = ({source}) => {
     const [state, setState] = React.useState(false);
     const handlePress = async() =>
     {
-        // sound.play(() =>{
-        //     setState(!state);
-        // })
-        // .on('ended',()=>
-        // {
-        //     setState(!!state);
-        // });
+
         await TrackPlayer.setupPlayer();
 
         // Add a track to the queue
@@ -26,13 +20,11 @@ const IconSound = ({source}) => {
         });
 
         // Start playing it
-       await TrackPlayer.play()
-      
+       await TrackPlayer.play();
     };
 
     return (
         <TouchableOpacity
-         disabled={state}
          onPress={handlePress}>
             <Image
               source={SoundIcon}

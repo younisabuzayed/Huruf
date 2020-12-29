@@ -63,14 +63,14 @@ const Letter = () => {
                 <View
                   style={styles.LetterView}>
                     <Text
-                      style={styles.textLetterBig}>{dataLetter.letter}</Text>
+                      style={styles.textLetterBig}>{dataLetter?.letter}</Text>
                     <Text
-                      style={styles.textLetterSmall} >{dataLetter.name}</Text>
+                      style={styles.textLetterSmall} >{dataLetter?.name}</Text>
                 </View>
                 <View
                   style={styles.soundIconView} >
                     <IconSound
-                      source={dataLetter.sound} />
+                      source={dataLetter?.sound} />
 
                 </View>
             </ImageBackground>
@@ -78,13 +78,13 @@ const Letter = () => {
           <View>
             <View>
                 <CardsContainer
-                data={dataLetter.animal}
+                data={dataLetter?.animal}
                 mainTitle="حيوانات"
                  />
             </View>
             <View>
                 <CardsContainer
-                data={dataLetter.plants}
+                data={dataLetter?.plants}
                 mainTitle="نباتات" />
             </View>
           </View>
@@ -113,7 +113,6 @@ const Letter = () => {
             {idLetter > 1 && <ButtonOpacity
                title="السابق"
                onPress={() =>  navigation.navigate('Letter',{id: counterSubtraction.toString()})} />}
-               {console.log(idLetter)}
           </View>
           <Alert
             isVisible={isModalVisible}
